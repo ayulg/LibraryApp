@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="12dp"
+    android:layout_marginEnd="12dp"
+    android:layout_marginBottom="10dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="3dp"
+    app:cardBackgroundColor="@color/background_card"
+    app:cardPreventCornerOverlap="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Top Row with Book ID -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <!-- Book ID Badge -->
+            <TextView
+                android:id="@+id/tvResBookId"
+                android:layout_width="wrap_content"
+                android:layout_height="26dp"
+                android:minWidth="60dp"
+                android:gravity="center"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:text="B001"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_white"
+                android:background="@drawable/badge_book_id"
+                android:letterSpacing="0.05"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <!-- Status Badge -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="26dp"
+                android:minWidth="70dp"
+                android:gravity="center"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="ACTIVE"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:textColor="@color/success"
+                android:background="@drawable/bg_status_available"/>
+
+        </LinearLayout>
+
+        <!-- Book Name Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📖 "
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/tvResBookName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Book Name"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary"
+                android:maxLines="2"
+                android:ellipsize="end"/>
+
+        </LinearLayout>
+
+        <!-- Student Name Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="6dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="👤 "
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/tvResStudentName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Student Name"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+
+        </LinearLayout>
+
+        <!-- Student ID Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="6dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📌 "
+                android:textSize="10sp"/>
+
+            <TextView
+                android:id="@+id/tvResStudentId"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="S001"
+                android:textSize="10sp"
+                android:textColor="@color/text_secondary"
+                android:maxLines="1"/>
+
+        </LinearLayout>
+
+        <!-- Reservation Date Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🔖 "
+                android:textSize="10sp"/>
+
+            <TextView
+                android:id="@+id/tvResDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Reserved: 2024-01-01"
+                android:textSize="10sp"
+                android:textColor="@color/text_light"/>
+
+        </LinearLayout>
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/text_light"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Cancel Button -->
+        <Button
+            android:id="@+id/btnCancelResAdmin"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="CANCEL RESERVATION"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_white"
+            android:background="@drawable/btn_primary"/>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

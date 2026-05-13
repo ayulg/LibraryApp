@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@color/background_card">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="⚙️ Settings"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/primary"
+        android:fontFamily="serif"
+        android:layout_marginBottom="16dp"
+        android:layout_gravity="center"/>
+
+    <View
+        android:layout_width="50dp"
+        android:layout_height="2dp"
+        android:background="@color/accent"
+        android:layout_marginBottom="16dp"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change Password"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/primary"
+        android:layout_marginBottom="12dp"/>
+
+    <EditText
+        android:id="@+id/etCurrentPassword"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:hint="Current Password"
+        android:inputType="textPassword"
+        android:background="@drawable/edittext_background"
+        android:padding="12dp"
+        android:layout_marginBottom="12dp"
+        android:textColor="@color/text_primary"
+        android:textColorHint="@color/text_light"/>
+
+    <EditText
+        android:id="@+id/etNewPassword"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:hint="New Password"
+        android:inputType="textPassword"
+        android:background="@drawable/edittext_background"
+        android:padding="12dp"
+        android:layout_marginBottom="12dp"
+        android:textColor="@color/text_primary"
+        android:textColorHint="@color/text_light"/>
+
+    <EditText
+        android:id="@+id/etConfirmNewPassword"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:hint="Confirm New Password"
+        android:inputType="textPassword"
+        android:background="@drawable/edittext_background"
+        android:padding="12dp"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/text_primary"
+        android:textColorHint="@color/text_light"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Security Question"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/primary"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/tvSecurityQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="What is your favorite book?"
+        android:textSize="12sp"
+        android:textColor="@color/accent_dark"
+        android:background="@color/surface"
+        android:padding="12dp"
+        android:layout_marginBottom="8dp"
+        android:fontStyle="normal"/>
+
+    <EditText
+        android:id="@+id/etNewSecurityAnswer"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:hint="New Security Answer"
+        android:background="@drawable/edittext_background"
+        android:padding="12dp"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/text_primary"
+        android:textColorHint="@color/text_light"/>
+
+    <Button
+        android:id="@+id/btnUpdateSettings"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:text="UPDATE SETTINGS"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_white"
+        android:background="@drawable/btn_primary"/>
+
+</LinearLayout>

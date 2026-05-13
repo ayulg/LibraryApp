@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <!-- Compact Dark Academia Header -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/btn_primary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:elevation="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+            <TextView
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="← Back"
+                android:textColor="@color/accent_light"
+                android:textSize="14sp"
+                android:padding="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Manage Students"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_white"
+                android:fontFamily="serif"
+                android:gravity="center"/>
+
+            <Button
+                android:id="@+id/btnAddStudent"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:text="+ ADD"
+                android:textColor="@color/accent"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:background="@drawable/btn_secondary"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"/>
+
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Search Bar Card -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="2dp"
+        app:cardBackgroundColor="@color/background_card">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🔍"
+                android:textSize="18sp"
+                android:layout_marginStart="8dp"/>
+
+            <EditText
+                android:id="@+id/etSearchStudent"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:hint="Search by name, ID, or email..."
+                android:textColorHint="@color/text_light"
+                android:textColor="@color/text_primary"
+                android:background="@null"
+                android:padding="8dp"
+                android:textSize="13sp"
+                android:inputType="text"
+                android:maxLines="1"/>
+
+            <TextView
+                android:id="@+id/tvStudentCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary"
+                android:background="@drawable/badge_count"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:layout_marginEnd="8dp"/>
+
+            <TextView
+                android:id="@+id/btnClearSearch"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:text="✕"
+                android:textSize="14sp"
+                android:textColor="@color/text_secondary"
+                android:gravity="center"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="12dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="12dp"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Add Student Card -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardAddStudent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:visibility="gone"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@color/background_card">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="16dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Add New Student"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/primary"/>
+
+                        <TextView
+                            android:id="@+id/btnCloseForm"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:text="✕"
+                            android:textSize="18sp"
+                            android:textColor="@color/text_secondary"
+                            android:gravity="center"
+                            android:background="?attr/selectableItemBackgroundBorderless"/>
+
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/etStudentId"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:hint="Student ID (e.g., S004)"
+                        android:textColorHint="@color/text_light"
+                        android:textColor="@color/text_primary"
+                        android:background="@drawable/edittext_background"
+                        android:padding="12dp"
+                        android:layout_marginBottom="12dp"
+                        android:inputType="textCapCharacters"
+                        android:maxLines="1"/>
+
+                    <EditText
+                        android:id="@+id/etStudentName"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:hint="Full Name"
+                        android:textColorHint="@color/text_light"
+                        android:textColor="@color/text_primary"
+                        android:background="@drawable/edittext_background"
+                        android:padding="12dp"
+                        android:layout_marginBottom="12dp"
+                        android:maxLines="1"/>
+
+                    <EditText
+                        android:id="@+id/etStudentEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:hint="Email Address"
+                        android:textColorHint="@color/text_light"
+                        android:textColor="@color/text_primary"
+                        android:background="@drawable/edittext_background"
+                        android:padding="12dp"
+                        android:layout_marginBottom="12dp"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="12dp">
+
+                        <EditText
+                            android:id="@+id/etStudentPhone"
+                            android:layout_width="0dp"
+                            android:layout_height="44dp"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="8dp"
+                            android:hint="Phone Number"
+                            android:textColorHint="@color/text_light"
+                            android:textColor="@color/text_primary"
+                            android:background="@drawable/edittext_background"
+                            android:padding="12dp"
+                            android:inputType="phone"
+                            android:maxLines="1"/>
+
+                        <EditText
+                            android:id="@+id/etStudentDepartment"
+                            android:layout_width="0dp"
+                            android:layout_height="44dp"
+                            android:layout_weight="1"
+                            android:layout_marginStart="8dp"
+                            android:hint="Department"
+                            android:textColorHint="@color/text_light"
+                            android:textColor="@color/text_primary"
+                            android:background="@drawable/edittext_background"
+                            android:padding="12dp"
+                            android:maxLines="1"/>
+
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/etStudentPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:hint="Password (leave empty for default: student123)"
+                        android:inputType="textPassword"
+                        android:textColorHint="@color/text_light"
+                        android:textColor="@color/text_primary"
+                        android:background="@drawable/edittext_background"
+                        android:padding="12dp"
+                        android:layout_marginBottom="16dp"/>
+
+                    <Button
+                        android:id="@+id/btnSubmitStudent"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:text="ADD STUDENT"
+                        android:textColor="@color/text_white"
+                        android:background="@drawable/btn_primary"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Students Section Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp"
+                android:layout_marginTop="4dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="All Students"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary"/>
+
+                <TextView
+                    android:id="@+id/tvSortButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sort by Name ↓"
+                    android:textSize="11sp"
+                    android:textColor="@color/accent"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:padding="8dp"/>
+
+            </LinearLayout>
+
+            <!-- Students List -->
+            <LinearLayout
+                android:id="@+id/llStudentsList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"/>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="32dp"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

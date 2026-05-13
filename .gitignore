@@ -1,0 +1,19 @@
+﻿# Built application files
+*.apk
+*.aab
+*.ap_
+*.dex
+*.class
+bin/
+gen/
+out/
+.gradle/
+build/
+local.properties
+*.iml
+.idea/
+.DS_Store
+Thumbs.db
+captures/
+.externalNativeBuild
+.cxx/
