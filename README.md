@@ -1,17 +1,17 @@
-# library_app
+$readme = @'
+# Library Book Issuing and Return System
 
-A new Flutter project.
+A Flutter-based application for managing book issuing and returning, built with Firebase.
 
-## Getting Started
+## 🚀 Live Demo
+Once deployed, the app will be available at:
+**[https://ayulg.github.io/LibraryApp/](https://ayulg.github.io/LibraryApp/)**
 
-This project is a starting point for a Flutter application.
+## 🛠️ Local Development
 
-A few resources to get you started if this is your first Flutter project:
+To run this project on your local machine:
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/ayulg/LibraryApp.git
+   cd LibraryApp
