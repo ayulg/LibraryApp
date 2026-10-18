@@ -1,0 +1,16 @@
+[
+  {
+    "accountNumber": "1000123456789",
+    "phone": "0911223344",
+    "name": "Student Tester",
+    "balance": 500.0,
+    "pin": "1234"
+  },
+  {
+    "accountNumber": "1000553647828",
+    "phone": "0900000000",
+    "name": "WKU Library Merchant",
+    "balance": 10000.0,
+    "pin": "0000"
+  }
+]
